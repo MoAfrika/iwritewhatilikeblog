@@ -1,0 +1,49 @@
+{
+  "name": "BlogPost",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Article title"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-friendly identifier"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Publication date"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Short preview of the article"
+    },
+    "content": {
+      "type": "string",
+      "description": "Full article content (HTML)"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Featured image URL"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "personal",
+        "tech",
+        "social",
+        "poetry",
+        "philosophy"
+      ],
+      "description": "Article category"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "date",
+    "excerpt",
+    "content"
+  ]
+}
